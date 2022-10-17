@@ -1,0 +1,11 @@
+0.7
+2020.2
+Oct 19 2021
+02:56:52
+/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.sim/sim_1/behav/xsim/glbl.v,1634335545,verilog,,,,glbl,,uvm,,,,,,
+/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sim_1/imports/Project/ALU_test.sv,1665768991,systemVerilog,,,,ALU_test,,uvm,../../../../project_ALU.srcs/sources_1/imports/Project,,,,,
+/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALU_defines.sv,1663175874,verilog,,,,ALU_defines,,,,,,,,
+/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv,1665764875,systemVerilog,,/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/MUL.sv,/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALU_defines.sv,ALUdesign,,uvm,../../../../project_ALU.srcs/sources_1/imports/Project,,,,,
+/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/MUL.sv,1665680889,systemVerilog,,/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/new/Normalize.sv,,Multiplication,,uvm,../../../../project_ALU.srcs/sources_1/imports/Project,,,,,
+/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/new/ADD_SUB.sv,1665765304,systemVerilog,,/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv,,ADD_SUB,,uvm,../../../../project_ALU.srcs/sources_1/imports/Project,,,,,
+/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/new/Normalize.sv,1665680827,systemVerilog,,/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sim_1/imports/Project/ALU_test.sv,,Normalize,,uvm,../../../../project_ALU.srcs/sources_1/imports/Project,,,,,

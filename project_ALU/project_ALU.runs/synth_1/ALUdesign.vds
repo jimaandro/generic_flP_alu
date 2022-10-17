@@ -1,0 +1,320 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon Oct 10 20:53:03 2022
+# Process ID: 2453515
+# Current directory: /home/dimitriosa/Downloads/Project/project_ALU/project_ALU.runs/synth_1
+# Command line: vivado -log ALUdesign.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALUdesign.tcl
+# Log file: /home/dimitriosa/Downloads/Project/project_ALU/project_ALU.runs/synth_1/ALUdesign.vds
+# Journal file: /home/dimitriosa/Downloads/Project/project_ALU/project_ALU.runs/synth_1/vivado.jou
+# Running On: carvouno3.ics.forth.gr, OS: Linux, CPU Frequency: 2194.842 MHz, CPU Physical cores: 32, Host memory: 168888 MB
+#-----------------------------------------------------------
+source ALUdesign.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.2/data/ip'.
+Command: synth_design -top ALUdesign -part xcku040-ffva1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-1540] The version limit for your license is '2022.07' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for new releases.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2453649
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2927.078 ; gain = 0.000 ; free physical = 9053 ; free virtual = 66231
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ALUdesign' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'Multiplication' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/MUL.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'Multiplication' (1#1) [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/MUL.sv:6]
+WARNING: [Synth 8-7071] port 'Exception' of module 'Multiplication' is unconnected for instance 'MUL' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:65]
+WARNING: [Synth 8-7071] port 'Overflow' of module 'Multiplication' is unconnected for instance 'MUL' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:65]
+WARNING: [Synth 8-7071] port 'Underflow' of module 'Multiplication' is unconnected for instance 'MUL' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:65]
+WARNING: [Synth 8-7023] instance 'MUL' of module 'Multiplication' has 6 connections declared, but only 3 given [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:65]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:128]
+WARNING: [Synth 8-6014] Unused sequential element outnum_axis_tready_REG_reg was removed.  [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:81]
+INFO: [Synth 8-6155] done synthesizing module 'ALUdesign' (2#1) [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:24]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2927.078 ; gain = 0.000 ; free physical = 8600 ; free virtual = 65779
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2927.078 ; gain = 0.000 ; free physical = 8574 ; free virtual = 65753
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku040-ffva1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2935.082 ; gain = 8.004 ; free physical = 8566 ; free virtual = 65744
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2935.082 ; gain = 8.004 ; free physical = 9451 ; free virtual = 66630
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   32 Bit       Adders := 1     
+	   3 Input    9 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   6 Input   32 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1920 (col length:120)
+BRAMs: 1200 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP MUL/product, operation Mode is: A*B2.
+DSP Report: register MUL/product is absorbed into DSP MUL/product.
+DSP Report: operator MUL/product is absorbed into DSP MUL/product.
+DSP Report: operator MUL/product is absorbed into DSP MUL/product.
+DSP Report: Generating DSP MUL/product, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator MUL/product is absorbed into DSP MUL/product.
+DSP Report: operator MUL/product is absorbed into DSP MUL/product.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'outnum_axis_tdata_reg[29]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'outnum_axis_tdata_reg[24]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'outnum_axis_tdata_reg[22]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'outnum_axis_tdata_reg[20]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'outnum_axis_tdata_reg[17]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'outnum_axis_tdata_reg[14]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'outnum_axis_tdata_reg[8]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'outnum_axis_tdata_reg[4]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2935.082 ; gain = 8.004 ; free physical = 8971 ; free virtual = 66152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++---------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ALUdesign      | A*B2           | 25     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|Multiplication | (PCIN>>17)+A*B | 25     | 8      | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++---------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2935.082 ; gain = 8.004 ; free physical = 8970 ; free virtual = 66151
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2935.082 ; gain = 8.004 ; free physical = 8969 ; free virtual = 66150
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2935.082 ; gain = 8.004 ; free physical = 8969 ; free virtual = 66151
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2935.082 ; gain = 8.004 ; free physical = 8969 ; free virtual = 66151
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[31] with 1st driver pin 'outNum_reg[31]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[31] with 2nd driver pin 'outnum_axis_tdata_reg[31]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[30] with 1st driver pin 'outNum_reg[30]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[30] with 2nd driver pin 'outnum_axis_tdata_reg[30]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[28] with 1st driver pin 'outNum_reg[28]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[28] with 2nd driver pin 'outnum_axis_tdata_reg[28]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[27] with 1st driver pin 'outNum_reg[27]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[27] with 2nd driver pin 'outnum_axis_tdata_reg[27]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[26] with 1st driver pin 'outNum_reg[26]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[26] with 2nd driver pin 'outnum_axis_tdata_reg[26]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[25] with 1st driver pin 'outNum_reg[25]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[25] with 2nd driver pin 'outnum_axis_tdata_reg[25]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[23] with 1st driver pin 'outNum_reg[23]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[23] with 2nd driver pin 'outnum_axis_tdata_reg[23]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[21] with 1st driver pin 'outNum_reg[21]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[21] with 2nd driver pin 'outnum_axis_tdata_reg[21]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[19] with 1st driver pin 'outNum_reg[19]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[19] with 2nd driver pin 'outnum_axis_tdata_reg[19]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[18] with 1st driver pin 'outNum_reg[18]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[18] with 2nd driver pin 'outnum_axis_tdata_reg[18]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[16] with 1st driver pin 'outNum_reg[16]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[16] with 2nd driver pin 'outnum_axis_tdata_reg[16]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[15] with 1st driver pin 'outNum_reg[15]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[15] with 2nd driver pin 'outnum_axis_tdata_reg[15]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[13] with 1st driver pin 'outNum_reg[13]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[13] with 2nd driver pin 'outnum_axis_tdata_reg[13]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[12] with 1st driver pin 'outNum_reg[12]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[12] with 2nd driver pin 'outnum_axis_tdata_reg[12]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[11] with 1st driver pin 'outNum_reg[11]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[11] with 2nd driver pin 'outnum_axis_tdata_reg[11]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[10] with 1st driver pin 'outNum_reg[10]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[10] with 2nd driver pin 'outnum_axis_tdata_reg[10]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[9] with 1st driver pin 'outNum_reg[9]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[9] with 2nd driver pin 'outnum_axis_tdata_reg[9]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[7] with 1st driver pin 'outNum_reg[7]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[7] with 2nd driver pin 'outnum_axis_tdata_reg[7]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[6] with 1st driver pin 'outNum_reg[6]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[6] with 2nd driver pin 'outnum_axis_tdata_reg[6]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[5] with 1st driver pin 'outNum_reg[5]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[5] with 2nd driver pin 'outnum_axis_tdata_reg[5]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[3] with 1st driver pin 'outNum_reg[3]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[3] with 2nd driver pin 'outnum_axis_tdata_reg[3]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[2] with 1st driver pin 'outNum_reg[2]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[2] with 2nd driver pin 'outnum_axis_tdata_reg[2]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[1] with 1st driver pin 'outNum_reg[1]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[1] with 2nd driver pin 'outnum_axis_tdata_reg[1]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[0] with 1st driver pin 'outNum_reg[0]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin outnum_axis_tdata_OBUF[0] with 2nd driver pin 'outnum_axis_tdata_reg[0]/Q' [/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv:71]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|       24|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2935.082 ; gain = 8.004 ; free physical = 8969 ; free virtual = 66151
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2935.082 ; gain = 8.004 ; free physical = 8969 ; free virtual = 66151
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2935.082 ; gain = 8.004 ; free physical = 8969 ; free virtual = 66151
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2935.082 ; gain = 8.004 ; free physical = 8969 ; free virtual = 66151
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY8  |     6|
+|3     |DSP48E2 |     2|
+|4     |LUT1    |     2|
+|5     |LUT2    |     9|
+|6     |LUT3    |    36|
+|7     |LUT4    |    28|
+|8     |LUT5    |    10|
+|9     |LUT6    |    25|
+|10    |FDRE    |    71|
+|11    |FDSE    |    48|
+|12    |IBUF    |    73|
+|13    |OBUF    |    36|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+---------------+------+
+|      |Instance |Module         |Cells |
++------+---------+---------------+------+
+|1     |top      |               |   347|
+|2     |  MUL    |Multiplication |    70|
++------+---------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2935.082 ; gain = 8.004 ; free physical = 8969 ; free virtual = 66151
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 72 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 2935.082 ; gain = 8.004 ; free physical = 8951 ; free virtual = 66133
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 2935.090 ; gain = 8.004 ; free physical = 8970 ; free virtual = 66151
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2935.090 ; gain = 0.000 ; free physical = 9066 ; free virtual = 66247
+INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3027.828 ; gain = 0.000 ; free physical = 9003 ; free virtual = 66185
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 76 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 2 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 73 instances
+
+Synth Design complete, checksum: 4f4e2ae9
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 6 Warnings, 72 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 3027.828 ; gain = 114.891 ; free physical = 9082 ; free virtual = 66264
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint '/home/dimitriosa/Downloads/Project/project_ALU/project_ALU.runs/synth_1/ALUdesign.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ALUdesign_utilization_synth.rpt -pb ALUdesign_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 10 20:53:45 2022...
