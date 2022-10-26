@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../project_ALU.srcs/sources_1/imports/Project" \
+"../../../../project_ALU.srcs/sources_1/new/ADD_SUB.sv" \
+"../../../../project_ALU.srcs/sources_1/imports/Project/ALUdesign.sv" \
+"../../../../project_ALU.srcs/sources_1/imports/Project/MUL.sv" \
+"../../../../project_ALU.srcs/sources_1/new/Normalize.sv" \
+"../../../../project_ALU.srcs/sim_1/imports/Project/ALU_test.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
